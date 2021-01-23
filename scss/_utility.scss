@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 html {
@@ -38,7 +39,7 @@ p {
 .container {
     max-width: 90%;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 3rem;
 }
 
 // flex items
@@ -133,6 +134,3 @@ p {
 }
 
 // humberger-menu opening
-.open {
-    transform: translateX(0);
-}

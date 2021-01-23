@@ -1,9 +1,8 @@
-const navMenu = document.querySelector(".navMenu");
-const humberger = document.querySelector(".humberger-menu");
+const navMenu = document.querySelector(".nav-menu");
+const humbergerMenu = document.querySelector(".humberger-menu");
 
 // event letseners
-humberger.addEventListener("click", () => {
-    navMenu.classList.add(".open");
+humbergerMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    humbergerMenu.classList.toggle("animate");
 });
-
-// functions
