@@ -76,7 +76,7 @@ p {
         font-weight: bolder;
     }
     h1 {
-        color: $primary-font-color;
+        color: $light-font-color;
         font-size: 4rem;
     }
     .c-section-container {
@@ -89,10 +89,10 @@ p {
     }
     a {
         display: inline-block;
-        color: $yellow-color;
+        color: $yellow-1;
         font-weight: 800;
         padding: 0.5rem;
-        border: 1px solid $yellow-color;
+        border: 1px solid $yellow-1;
         background-color: transparent;
         letter-spacing: 3px;
         width: 20rem;
@@ -128,6 +128,6 @@ p {
 
 .btn-1:hover {
     background-color: transparent;
-    color: $yellow-color;
-    border: 1px solid $yellow-color;
+    color: $yellow-1;
+    border: 1px solid $yellow-1;
 }
