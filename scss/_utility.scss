@@ -131,3 +131,8 @@ p {
     color: $yellow-1;
     border: 1px solid $yellow-1;
 }
+
+// humberger-menu opening
+.open {
+    transform: translateX(0);
+}

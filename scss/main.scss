@@ -45,6 +45,7 @@ body {
                 background-color: $dark-bg;
                 justify-content: center;
                 align-items: center;
+                transform: translateX(-100%);
                 li {
                     margin: 2rem auto;
                     width: 100%;
@@ -53,6 +54,9 @@ body {
                         color: $light-font-color;
                         font-size: 2rem;
                     }
+                }
+                .open {
+                    transform: translateX(0);
                 }
             }
         }
