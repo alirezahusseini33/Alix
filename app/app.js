@@ -45,7 +45,7 @@ const rightSide = document.querySelector(".frond-end");
 const leftSideContainer = document.querySelector(".container-1");
 const rightSideContainer = document.querySelector(".container-2");
 
-leftSideContainer.addEventListener("mouseover", () => {
+leftSide.addEventListener("mouseover", () => {
     document.querySelector(".frond-end").style.zIndex = "-1";
     setTimeout((e) => {
         document.querySelector(".frond-end").style.zIndex = "1";
