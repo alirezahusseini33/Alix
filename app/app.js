@@ -1,7 +1,7 @@
 const navMenu = document.querySelector(".nav-menu");
 const humbergerMenu = document.querySelector(".humberger-menu");
 const navLink = document.querySelectorAll(".nav-link");
-
+const navLists = document.querySelectorAll("li");
 // event letseners
 humbergerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("open");
@@ -9,8 +9,13 @@ humbergerMenu.addEventListener("click", () => {
 });
 
 // closing mobile-nav when clicking the links
-navLink.forEach((link) => {
+navLists.forEach((link) => {
     link.addEventListener("click", () => {
-        link.classList.remove("open");
+        navMenu.classList.add("close");
+        humbergerMenu.classList.toggle("animate");
+        setTimeout(() => {
+            navMenu.classList.remove("close");
+            navMenu.classList.remove("open");
+        }, 100);
     });
 });

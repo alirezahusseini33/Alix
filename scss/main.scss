@@ -15,8 +15,8 @@ body {
     position: relative;
     background-color: $light-bg;
     background-image: url("/assets/backgrounds/showcase-hello-bg.svg");
-    background-size: 80%;
-    background-position: 85% 65%;
+    background-size: 65%;
+    background-position: 100% 70%;
     background-repeat: no-repeat;
     .container {
         position: relative;
@@ -94,15 +94,18 @@ body {
             .open {
                 transform: translateY(0);
             }
+            .close {
+                transform: translateY(-100%);
+            }
         }
         .showcase-contents {
             margin: 0 0 3rem 0;
             padding: 3rem 0;
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 400px;
             h2 {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: bolder;
                 color: $dark-2;
                 margin-top: 2rem;
@@ -111,13 +114,13 @@ body {
                 // -webkit-text-stroke: 2px $light-blue;
                 color: $dark-2;
                 position: absolute;
-                top: 10rem;
+                top: 8rem;
                 left: 0%;
                 font-size: 6rem;
             }
             .alireza {
                 content: "";
-                top: 10rem;
+                top: 8rem;
                 left: 0%;
                 position: absolute;
                 animation: text-wave 5s ease-in-out infinite;
@@ -133,6 +136,44 @@ body {
                 50% {
                     clip-path: polygon( 0 81%, 10% 78%, 26% 71%, 39% 64%, 56% 49%, 71% 42%, 88% 41%, 100% 48%, 100% 100%, 0 100%);
                 }
+            }
+            p {
+                margin-top: 7.5rem;
+                font-size: 1.8rem;
+                text-align: left;
+            }
+            button {
+                margin-top: 1.5rem;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border: 1px solid $light-blue;
+                background-color: transparent;
+                color: $light-blue;
+                font-size: 1.5rem;
+                font-weight: bold;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                z-index: 10;
+                transition: all 0.5s ease-in-out;
+            }
+            button::before {
+                content: "";
+                position: absolute;
+                background-color: $light-blue;
+                width: 100%;
+                height: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 50% 50% 0 0;
+                transition: all 0.5s ease-in-out;
+                z-index: -1;
+            }
+            button:hover {
+                color: $light-font-color;
+            }
+            button:hover::before {
+                height: 180%;
             }
         }
     }
@@ -206,3 +247,5 @@ body {
 }
 
 // showcase wave effect ends -------------
+// media queries for large screens -------------------------------
+@media screen and (min-width: 768px) {}
