@@ -14,6 +14,10 @@ body {
     width: 100%;
     position: relative;
     background-color: $light-bg;
+    background-image: url("/assets/backgrounds/showcase-hello-bg.svg");
+    background-size: 80%;
+    background-position: 85% 65%;
+    background-repeat: no-repeat;
     .container {
         position: relative;
         display: flex;
@@ -23,18 +27,18 @@ body {
         // humberger
         .humberger-menu {
             position: absolute;
-            top: 1.5rem;
-            right: 0;
+            top: 2.5rem;
+            right: 2rem;
             height: 5rem;
-            width: 4rem;
+            width: 6rem;
             z-index: 10000;
             cursor: pointer;
             span {
-                height: 5px;
-                width: 4rem;
+                height: 6px;
+                width: 6rem;
                 background-color: $light-blue;
                 display: block;
-                margin: 7px 0;
+                margin: 9px 0;
                 transition: all 0.5s ease-in-out;
             }
         }
@@ -44,10 +48,10 @@ body {
             opacity: 0;
         }
         .animate .line-1 {
-            transform: translateY(230%) rotateZ(45deg);
+            transform: translateY(250%) rotateZ(45deg);
         }
         .animate .line-3 {
-            transform: translateY(-230%) rotateZ(-45deg);
+            transform: translateY(-250%) rotateZ(-45deg);
         }
         // navbar
         nav {
@@ -55,13 +59,11 @@ body {
             justify-content: space-between;
             align-items: center;
             // logo
-            h1 {
-                font-size: 2.5rem;
-                span {
-                    font-size: 3rem;
-                    display: inline-block;
-                    -webkit-text-stroke: 1px $light-blue;
-                    color: transparent;
+            .logo {
+                margin-left: -1rem;
+                img {
+                    height: 7rem;
+                    width: 7rem;
                 }
             }
             ul {
@@ -94,21 +96,24 @@ body {
             }
         }
         .showcase-contents {
-            margin: 3rem 0;
+            margin: 0 0 3rem 0;
             padding: 3rem 0;
             position: relative;
             width: 100%;
             height: 200px;
-            h1 {
-                font-size: 5rem;
+            h2 {
+                font-size: 3rem;
                 font-weight: bolder;
+                color: $dark-2;
+                margin-top: 2rem;
             }
             .stroke-alireza {
-                -webkit-text-stroke: 2px $light-blue;
-                color: transparent;
+                // -webkit-text-stroke: 2px $light-blue;
+                color: $dark-2;
                 position: absolute;
                 top: 10rem;
                 left: 0%;
+                font-size: 6rem;
             }
             .alireza {
                 content: "";
@@ -118,6 +123,7 @@ body {
                 animation: text-wave 5s ease-in-out infinite;
                 color: $light-blue;
                 z-index: 10;
+                font-size: 6rem;
             }
             @keyframes text-wave {
                 0%,
