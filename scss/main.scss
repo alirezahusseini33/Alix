@@ -281,43 +281,45 @@ nav {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    // transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     .design {
         height: 100vh;
         width: 100%;
+        top: 0;
+        left: 0;
+        margin: 3rem auto;
         position: absolute;
-        // transition: all 1s ease-in-out;
-        .container {
-            clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
-            background-color: $light-blue;
-            margin: 3rem auto;
-            height: 100%;
-            transition: all 1s ease-in-out;
-        }
-        .container:hover {
-            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-            z-index: 10;
-        }
+        clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
+        background-color: $light-blue;
+        transition: all 1s linear;
+    }
+    .design:hover {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        z-index: 10;
+    }
+    .design-hover {
+        z-index: -1;
     }
     // .design:hover {}
     .frond-end {
         position: absolute;
         height: 100vh;
         width: 100%;
-        // transition: all 1s ease-in-out;
-        .container {
-            background-color: $dark-blue;
-            clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
-            margin: 3rem auto;
-            height: 100%;
-            transition: all 1s ease-in-out;
-        }
-        .container:hover {
-            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-            z-index: 9;
-        }
+        top: 0;
+        left: 0;
+        clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+        margin: 3rem auto;
+        background-color: $dark-blue;
+        transition: all 1s linear;
+    }
+    .frond-end:hover {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        z-index: 9;
     }
     //     .frond-end:hover {}
+    .frond-end-hover {
+        z-index: -1;
+    }
 }
 
 // media queries for large screens -------------------------------

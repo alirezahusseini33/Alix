@@ -39,15 +39,12 @@ window.onscroll = function() {
 };
 
 // mouse hover effect on portfolio section
-const leftSide = document.querySelector(".design");
-const rightSide = document.querySelector(".frond-end");
-
-const leftSideContainer = document.querySelector(".container-1");
-const rightSideContainer = document.querySelector(".container-2");
+const leftSide = document.querySelector("#design");
+const rightSide = document.querySelector("#frond-end");
 
 leftSide.addEventListener("mouseover", () => {
-    document.querySelector(".frond-end").style.zIndex = "-1";
-    setTimeout((e) => {
-        document.querySelector(".frond-end").style.zIndex = "1";
+    rightSide.style.classList.add("frond-end-hover");
+    setTimeout(() => {
+        rightSide.style.zIndex = "1";
     }, 2000);
 });
