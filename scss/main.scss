@@ -14,17 +14,17 @@ body {
 .humberger-menu {
     position: fixed;
     top: 1.5rem;
-    right: 2rem;
+    right: 2.5rem;
     height: 5rem;
-    width: 6rem;
+    width: 5rem;
     z-index: 10000;
     cursor: pointer;
     span {
         height: 6px;
-        width: 6rem;
+        width: 5rem;
         background-color: $light-blue;
         display: block;
-        margin: 9px 0;
+        margin: 7px 0;
         transition: all 0.5s ease-in-out;
     }
     .line-light {
@@ -39,11 +39,11 @@ body {
 }
 
 .animate .line-1 {
-    transform: translateY(250%) rotateZ(45deg);
+    transform: translateY(210%) rotateZ(45deg);
 }
 
 .animate .line-3 {
-    transform: translateY(-250%) rotateZ(-45deg);
+    transform: translateY(-210%) rotateZ(-45deg);
 }
 
 // navbar
@@ -66,8 +66,8 @@ nav {
         .logo {
             margin: 2rem 0 0 -1rem;
             img {
-                height: 7rem;
-                width: 7rem;
+                height: 5rem;
+                width: 5rem;
             }
         }
         ul {
@@ -142,13 +142,13 @@ nav {
                 // -webkit-text-stroke: 2px $light-blue;
                 color: $dark-2;
                 position: absolute;
-                top: 8rem;
+                top: 9rem;
                 left: 0%;
                 font-size: 6rem;
             }
             .alireza {
                 content: "";
-                top: 8rem;
+                top: 9rem;
                 left: 0%;
                 position: absolute;
                 animation: text-wave 5s ease-in-out infinite;
@@ -166,13 +166,13 @@ nav {
                 }
             }
             p {
-                margin-top: 7.5rem;
-                font-size: 1.8rem;
+                margin-top: 8.5rem;
+                font-size: 1.5rem;
                 text-align: left;
             }
             // hire me button's style
             button {
-                margin-top: 1.5rem;
+                margin-top: 2.5rem;
                 display: inline-block;
                 padding: 0.8rem 1.5rem;
                 border: 1px solid $light-blue;
@@ -251,7 +251,7 @@ nav {
     width: 100%;
     background-image: url("/assets/waves/Vector-2\ \(2\).svg");
     z-index: 10;
-    animation: wave-2 15s ease infinite;
+    animation: wave-2 15s linear infinite;
     background-size: cover;
     background-repeat: no-repeat;
     animation-delay: 0s;
@@ -282,44 +282,59 @@ nav {
     width: 100%;
     position: relative;
     transition: all 1s ease-in-out;
+    background-color: $light-gray;
     .design {
         height: 100vh;
         width: 100%;
-        top: 0;
-        left: 0;
-        margin: 3rem auto;
         position: absolute;
-        clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
-        background-color: $light-blue;
+        z-index: 0;
+        clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
         transition: all 1s linear;
+        .container {
+            clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+            background-color: $light-blue;
+            transition: all 1s linear;
+            height: 100%;
+            width: 100%;
+        }
+        .container:hover {
+            clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
+        }
     }
     .design:hover {
-        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-        z-index: 10;
+        clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
     }
-    .design-hover {
-        z-index: -1;
-    }
+    // .design:hover {
+    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    //     z-index: 10;
+    // }
     // .design:hover {}
     .frond-end {
         position: absolute;
         height: 100vh;
         width: 100%;
-        top: 0;
-        left: 0;
-        clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
-        margin: 3rem auto;
-        background-color: $dark-blue;
+        z-index: 0;
+        clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
         transition: all 1s linear;
+        .container {
+            clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+            background-color: $dark-blue;
+            transition: all 1s linear;
+            height: 100%;
+            width: 100%;
+        }
+        .container:hover {
+            clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
+        }
     }
     .frond-end:hover {
-        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-        z-index: 9;
+        clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
     }
+    // .frond-end:hover {
+    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    //     z-index: 9;
+    // }
     //     .frond-end:hover {}
-    .frond-end-hover {
-        z-index: -1;
-    }
 }
 
 // media queries for large screens -------------------------------
@@ -393,9 +408,10 @@ nav {
             }
         }
     }
+    // showcase
     .showcase {
         background-size: 35%;
-        background-position: 80% 55%;
+        background-position: 80% 15%;
         .container {
             // showcase-contents styles
             .showcase-contents {
@@ -412,5 +428,69 @@ nav {
                 }
             }
         }
+    }
+    // main-page styles starts here ---------------------
+    .portfolio {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        transition: all 1s ease-in-out;
+        background-color: $light-gray;
+        .design {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+            clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
+            transition: all 1s linear;
+            .container {
+                clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
+                background-color: $light-blue;
+                transition: all 1s linear;
+                height: 100%;
+                width: 100%;
+                margin: 3rem auto;
+            }
+            .container:hover {
+                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+                // z-index: 1;
+            }
+        }
+        .design:hover {
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        }
+        // .design:hover {
+        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        //     z-index: 10;
+        // }
+        // .design:hover {}
+        .frond-end {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            z-index: 0;
+            clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+            transition: all 1s linear;
+            .container {
+                clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+                margin: 3rem auto;
+                background-color: $dark-blue;
+                transition: all 1s linear;
+                height: 100%;
+                width: 100%;
+            }
+            .container:hover {
+                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+                // z-index: 1;
+            }
+        }
+        .frond-end:hover {
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        }
+        // .frond-end:hover {
+        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        //     z-index: 9;
+        // }
+        //     .frond-end:hover {}
     }
 }
