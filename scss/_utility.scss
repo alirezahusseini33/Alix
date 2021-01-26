@@ -59,47 +59,6 @@ p {
     min-height: 100vh;
 }
 
-// content-section utility styles
-.content-section {
-    background-color: $dark-bg;
-    height: 100vh;
-    .container {
-        padding: 13rem 2rem;
-        color: darken($light-gray, 70%);
-    }
-    .f-paragraph {
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-        margin-bottom: 2rem;
-        font-weight: bolder;
-    }
-    h1 {
-        color: $light-font-color;
-        font-size: 4rem;
-    }
-    .c-section-container {
-        padding-left: 2rem;
-        margin-top: 2rem;
-        p {
-            color: darken($light-gray, 60%);
-            font-size: 1.5rem;
-        }
-    }
-    a {
-        display: inline-block;
-        color: $yellow-1;
-        font-weight: 800;
-        padding: 0.5rem;
-        border: 1px solid $yellow-1;
-        background-color: transparent;
-        letter-spacing: 3px;
-        width: 20rem;
-        margin-top: 4rem;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-}
-
 // image-section
 .image-section {
     background-position: center;
